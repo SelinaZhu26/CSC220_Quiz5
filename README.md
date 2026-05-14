@@ -1,1 +1,5 @@
 # CSC220_Quiz5
+
+This solution solves the Number of Islands problem using a Depth-First Search (DFS) approach. The numIslands function iterates through every cell in the 2D grid, and whenever it finds a '1' (land), it increments the island counter and calls dfs to explore the entire connected component. The dfs function recursively visits all adjacent land cells (up, down, left, right) and marks them as '0' to indicate they have been visited. The base case ensures the recursion stops when it goes out of bounds or encounters water ('0'). By turning visited land into water, the algorithm avoids revisiting the same cells and double-counting islands.
+
+The time complexity is O(m × n), where m is the number of rows and n is the number of columns, because each cell is visited at most once. The space complexity is O(m × n) in the worst case due to the recursion stack, which can grow as large as the total number of cells if the entire grid is one large island. In average cases, the recursion depth is limited to the size of a single island rather than the whole grid.
